@@ -1,0 +1,228 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "sky guide",
+            "intents": [
+                {
+                    "name": "AMAZON.FallbackIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "SetLocationIntent",
+                    "slots": [
+                        {
+                            "name": "city",
+                            "type": "AMAZON.US_CITY",
+                            "samples": [
+                                "{city}",
+                                "My location is {city}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "my current location is {city}",
+                        "my location is {city}",
+                        "set my current location to {city}",
+                        "set current location to {city}",
+                        "set my location to {city}",
+                        "set location to {city}"
+                    ]
+                },
+                {
+                    "name": "PlanetIntent",
+                    "slots": [
+                        {
+                            "name": "planet",
+                            "type": "Planet",
+                            "samples": [
+                                "I am looking for {planet}",
+                                "Looking for {planet}",
+                                "{planet}"
+                            ]
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME",
+                            "samples": [
+                                "at {time}",
+                                "{time}"
+                            ]
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "Where is {planet} {date}",
+                        "Where is {planet} at {time} {date}",
+                        "Where is {planet} at {time}",
+                        "Where is {planet} {time}",
+                        "Where is {planet} "
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "Planet",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Moon"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Uranus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Neptune"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Saturn"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Jupiter"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mars"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Earth"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Venus"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mercury"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "SetLocationIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "city",
+                            "type": "AMAZON.US_CITY",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.856606953412.667968630768"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "PlanetIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "planet",
+                            "type": "Planet",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1486767359243.309460594901"
+                            }
+                        },
+                        {
+                            "name": "time",
+                            "type": "AMAZON.TIME",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1486767359243.102070729842"
+                            }
+                        },
+                        {
+                            "name": "date",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.856606953412.667968630768",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please name a major city nearby"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Please say, my location is, and the name of a major city nearby."
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1486767359243.309460594901",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Which planet are you interested in?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Which planet are you looking for?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1486767359243.102070729842",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Say now or some specific time"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "At what time?"
+                    }
+                ]
+            }
+        ]
+    }
+}

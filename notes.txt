@@ -1,0 +1,10 @@
+1. I had to use 
+pip install cryptography --global-option=build_ext --global-option="-L/usr/local/opt/openssl/lib" --global-option="-I/usr/local/opt/openssl/include"
+borrowed from here: https://github.com/pyca/cryptography/issues/3489 to install cryptography on macos
+
+2. I had to change the version of PyYAML to 3.13 in the requirements because of this:
+https://github.com/yaml/pyyaml/issues/126
+https://github.com/yaml/pyyaml/issues/152
+
+3. 
+

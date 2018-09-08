@@ -1,0 +1,33 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+"aniso8601" = "==1.2.0"
+"asn1crypto" = "==0.24.0"
+cffi = "==1.11.5"
+click = "==6.7"
+cryptography = "==2.1.4"
+idna = "==2.7"
+itsdangerous = "==0.24"
+pycparser = "==2.18"
+python-dateutil = "==2.7.3"
+six = "==1.11.0"
+Flask = "==0.12.1"
+Flask-Ask = {path = "./../flask-ask"}
+"Jinja2" = "==2.10"
+MarkupSafe = "==1.0"
+pyOpenSSL = "==17.0.0"
+PyYAML = "==3.13"
+Werkzeug = "==0.14.1"
+pyephem = "*"
+timezonefinder = "*"
+maya = "*"
+"boto3" = "*"
+geopy = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.6"

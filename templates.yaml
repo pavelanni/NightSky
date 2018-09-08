@@ -1,0 +1,27 @@
+welcome: |
+  Sky Guide. You location is set to {{ city }}. Ask where is Venus now.
+
+welcome_new: |
+  Sky Guide. You location is not set yet. Please say, set my location to ... 
+  and name the nearest major city, like Atlanta or Minneapolis.
+
+welcome_re: |
+  Sky Guide. How may I help you?
+
+welcome_new_re: |
+  Sky Guide. Please set your location by saying, set my location to ...
+  and name the nearest major city, like Atlanta or Minneapolis.
+  
+
+welcome_card: |
+  Sky Guide is an Alexa skill written by Pavel Anni. It tells you where are planets in the sky.
+
+stop_bye: |
+  Goodbye!
+
+cancel_bye: |
+  OK, goodbye!
+
+help_text: |
+  Sky Guide is an Alexa skill that tells you where planets are in the sky. 
+  You can ask it where is Mars now, or where is Venus tomorrow at nine PM.
