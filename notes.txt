@@ -6,5 +6,8 @@ borrowed from here: https://github.com/pyca/cryptography/issues/3489 to install 
 https://github.com/yaml/pyyaml/issues/126
 https://github.com/yaml/pyyaml/issues/152
 
-3. 
+3. I had to downgrade to Python 3.6 from 3.7 (which was installed recently by Homebrew). 
+Instructions here: https://zoltanaltfatter.com/2017/09/07/Install-a-specific-version-of-formula-with-homebrew/
+
+ 
 
